@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/main.ts"
+    "dev": "tsx watch src/main.ts",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +20,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.8",
+    "pg": "^8.11.5",
     "postgres": "^3.4.4"
   }
 }
